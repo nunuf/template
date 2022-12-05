@@ -1,0 +1,25 @@
+.Card {
+  height: 200px !important;
+  overflow: hidden;
+}
+
+.Card .CloseBtn {
+  position: relative;
+  left: 150px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.Card .EditBtn {
+  position: relative;
+  right: 150px;
+  cursor: pointer;
+  display: inline-block;
+  color: black;
+}
+
+.Card .Description {
+  height: 30%;
+  word-wrap: break-word;
+  overflow-y: auto;
+}

@@ -1,0 +1,10 @@
+.Header {
+	font-size: 40px;
+ background-image: linear-gradient(#9790a0 50%, white 60%, #afaab6 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Header > h1 {
+  margin: 0;
+}

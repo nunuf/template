@@ -1,0 +1,23 @@
+.Edit {
+  width: 300px !important;
+  text-align: center;
+}
+
+.Edit form > .TextBox {
+  width: 100%;
+  margin: 8px 0;
+}
+
+.Edit > input,
+.Edit > .SelectBox,
+.Edit > button {
+  width: 100%;
+}
+
+.Edit .Close {
+  display: inline;
+  position: relative;
+  left: 270px;
+  top: -10px;
+  color: black;
+}

@@ -1,0 +1,23 @@
+.Add {
+  width: 300px !important;
+  text-align: center;
+ }
+ 
+ .Add form > .TextBox {
+   width: 100%;
+   margin: 8px 0;
+ }
+ 
+ .Add > input,
+ .Add > .SelectBox,
+ .Add > button {
+   width: 100%;
+ }
+ 
+ .Add .Close {
+  display: inline;
+  position: relative;
+  left: 120px;
+  top: -10px;
+  color: black;
+}

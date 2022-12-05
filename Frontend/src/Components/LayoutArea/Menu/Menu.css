@@ -1,0 +1,6 @@
+.Menu > .active {
+  font-size: x-large;
+  background-image: linear-gradient(to left,#ffff66, #fe17a2, #ab20fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
