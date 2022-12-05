@@ -41,8 +41,8 @@ const List = (): JSX.Element => {
         <Select
           labelId="targetAudience-label"
           label="Select Target Audience"
-          onChange={showGifts}
           className="SelectBox"
+          onChange={showGifts}
           value={audience}
         >
           {
@@ -57,8 +57,8 @@ const List = (): JSX.Element => {
       <div>
         {
           gifts.length > 0 ?
-            gifts.map(g => <Card key={g.giftId} gift={g} giftDeleted={handleGiftDeleted} />) :
-            audience && <h2>No Items Found</h2>
+          gifts.map(g => <Card key={g.giftId} gift={g} giftDeleted={handleGiftDeleted} />) :
+          audience && <h2>No Items Found</h2>
         }
       </div>
     </div>

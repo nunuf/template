@@ -17,7 +17,6 @@
  .Add .Close {
   display: inline;
   position: relative;
-  left: 120px;
-  top: -10px;
+  left: 40%;
   color: black;
 }

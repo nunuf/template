@@ -43,7 +43,8 @@ const Edit = (): JSX.Element => {
 
   const send = async (gift: GiftModel) => {
     try {
-      await giftsService.editGift(gift);
+      const giftToUpdate = { ...gift, targetAudienceId: +targetAudienceId };
+      await giftsService.editGift(giftToUpdate);
       alert('Gift successfully updated');
       navigate('/gifts');
     } catch (err: any) {
@@ -54,22 +55,21 @@ const Edit = (): JSX.Element => {
   return (
     <div className="Edit Box">
       <div className='Title'>Edit</div>
+      <NavLink to="/gifts" className="Close"><Close /></NavLink>
       <form onSubmit={handleSubmit(send)}>
-        <NavLink to="/gifts" className="Close"><Close /></NavLink>
         <input type="hidden" {...register('giftId')} />
         <FormControl fullWidth>
-          <InputLabel id="targetAudience-label" className="SelectBox">Select Target Audience</InputLabel>
+          <InputLabel id="targetAudienceEdit-label" className="SelectBox">Select Target Audience</InputLabel>
           <Select
-            labelId="targetAudience-label"
-            value={targetAudienceId}
+            labelId="targetAudienceEdit-label"
             label="Select Target Audience"
             className="SelectBox"
             onChange={handleChange}
-            {...register('targetAudienceId')}
+            value={targetAudienceId}
           >
             {
               targetAudience.map(t =>
-                <MenuItem key={t.targetAudienceId} value={t.targetAudienceId}>
+                <MenuItem key={'Edit'+t.targetAudienceId} value={t.targetAudienceId}>
                   {t.targetAudienceName}
                 </MenuItem>
               )

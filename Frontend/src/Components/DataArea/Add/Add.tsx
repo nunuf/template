@@ -36,9 +36,9 @@ const Add = (): JSX.Element => {
       <NavLink to="/gifts" className="Close"><Close /></NavLink>
       <form onSubmit={handleSubmit(send)}>
         <FormControl fullWidth>
-          <InputLabel id="targetAudience-label" className="SelectBox">Select Target Audience</InputLabel>
+          <InputLabel id="targetAudienceAdd-label" className="SelectBox">Select Target Audience</InputLabel>
           <Select
-            labelId="targetAudience-label"
+            labelId="targetAudienceAdd-label"
             label="Select Target Audience"
             className="SelectBox"
             {...register('targetAudienceId')}
@@ -46,7 +46,7 @@ const Add = (): JSX.Element => {
           >
             {
               targetAudience.map(t =>
-                <MenuItem key={t.targetAudienceId} value={t.targetAudienceId}>
+                <MenuItem key={'Add'+t.targetAudienceId} value={t.targetAudienceId}>
                   {t.targetAudienceName}
                 </MenuItem>
               )
